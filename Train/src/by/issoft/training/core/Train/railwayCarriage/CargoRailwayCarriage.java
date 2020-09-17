@@ -1,11 +1,14 @@
-package by.issoft.training.core;
+package by.issoft.training.core.Train.railwayCarriage;
 
-public class RailwayCarriage {
+import by.issoft.training.core.Cargo;
 
+public class CargoRailwayCarriage extends RailwayCarriage {
     private double carryingCapacity;
     private int railwayCarriageNumber;
 
-    public RailwayCarriage(double carryingCapacity, int railwayCarriageNumber) {
+    public CargoRailwayCarriage(double carryingCapacity, int railwayCarriageNumber,
+                                RailwayCarriageType type, String route) {
+        super(type, route);
         this.carryingCapacity = carryingCapacity;
         this.railwayCarriageNumber = railwayCarriageNumber;
     }
@@ -38,9 +41,14 @@ public class RailwayCarriage {
             System.out.println("Cargos: " + cargos[i].getDescription() + " with total weight = " +
                     cargos[i].getTotalWeight() + " was loaded into railway carriage № " + railwayCarriageNumber +
                     " with carrying capacity = " + carryingCapacity);
-                this.cargos[i] = cargos[i];
-                carryingCapacity -= cargos[i].getTotalWeight();
-                System.out.println("Now carrying capacity = " + carryingCapacity);
+            this.cargos[i] = cargos[i];
+            carryingCapacity -= cargos[i].getTotalWeight();
+            System.out.println("Now carrying capacity = " + carryingCapacity);
         }
+    }
+
+    @Override
+    public String getInfo(){
+        return getRoute() + " " + getType() + " " + getCarryingCapacity() + " " + getRailwayCarriageNumber();
     }
 }
