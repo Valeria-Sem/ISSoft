@@ -7,6 +7,16 @@ public class Locomotive extends RailwayCarriage{
     private int speed;
     private User driver;
 
+    public RailwayCarriage[] getRailwayCarriages() {
+        return railwayCarriages;
+    }
+
+    public void setRailwayCarriages(RailwayCarriage[] railwayCarriages) {
+        this.railwayCarriages = railwayCarriages;
+    }
+
+    private RailwayCarriage[] railwayCarriages = new RailwayCarriage[10];
+
     public Locomotive(User driver, int speed, RailwayCarriageType type, String route) {
         super(type, route);
         this.driver = driver;
@@ -27,14 +37,6 @@ public class Locomotive extends RailwayCarriage{
 
     public void setSpeed(int speed) {
         this.speed = speed;
-    }
-
-    private RailwayCarriage[] railwayCarriages = new RailwayCarriage[10];
-
-    public void addRailwayCarriages (RailwayCarriage... railwayCarriages){
-        for(int i=0; i < railwayCarriages.length; i++){
-            this.railwayCarriages[i] = railwayCarriages[i];
-        }
     }
 
     @Override

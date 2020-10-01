@@ -2,10 +2,7 @@ package by.issoft.training;
 
 import by.issoft.training.core.Cargo;
 import by.issoft.training.core.Train.Train;
-import by.issoft.training.core.Train.railwayCarriage.CargoRailwayCarriage;
-import by.issoft.training.core.Train.railwayCarriage.PassengerRailwayCarriage;
-import by.issoft.training.core.Train.railwayCarriage.RailwayCarriage;
-import by.issoft.training.core.Train.railwayCarriage.RailwayCarriageType;
+import by.issoft.training.core.Train.railwayCarriage.*;
 import by.issoft.training.core.userInfo.Sex;
 import by.issoft.training.core.userInfo.User;
 
@@ -56,9 +53,5 @@ public class Main {
         System.out.println(pass.getInfo());
         System.out.println(railwayCarriage2.getInfo());
 
-
-
-
-
-    }
+           }
 }
